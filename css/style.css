@@ -1,3 +1,37 @@
 body {
     text-align: center;
+    font-size: 1.5em;
+}
+
+.fail {
+  color: #cf0000;
+  font-weight: bold;
+}
+
+.success {
+  color: #c99312;
+  font-weight: bold;
+}
+
+.difficulty {
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  font-size: 1em;
+}
+
+#easy {
+  background: #372;
+}
+
+#medium {
+  background: #951;
+}
+
+#hard {
+  background: #922;
+}
+
+.selected {
+  box-shadow: 0 5px 0px rgba(0,200,0,0.2);
 }
