@@ -11,7 +11,6 @@ Score.prototype.addSuccess = function () {
 
 Score.prototype.addFail = function () {
   this.fail += 1;
-  console.log(this);
   document.querySelector('.fail').innerHTML = this.fail;
 };
 
@@ -83,11 +82,12 @@ Player.prototype.update = function() {
 
 };
 
+//Draw default player sprite and coordinates
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
 
-
+//Navigate the table by changing column and row values
 Player.prototype.handleInput = function (keyPress) {
   if (keyPress == 'left') {
     this.col -= 1;
@@ -104,6 +104,7 @@ Player.prototype.handleInput = function (keyPress) {
 
 };
 
+//Sets default position for Player
 Player.prototype.reset = function() {
   this.col = 2;
   this.row = 5;
@@ -135,7 +136,7 @@ document.addEventListener('keyup', function(e) {
 
 
 //Ensure all page elements are loaded prior to adding event listeners
-window.onload=function(){
+window.onload = function() {
 
 //Change difficulty of game
   document.getElementById('hard').addEventListener('click', function () {
@@ -166,6 +167,69 @@ window.onload=function(){
     for(var i = 0; i < numEnemies; i++) {
       allEnemies.push(new Enemy(i*101, (i+1)*83-20));
     };
-    
   });
+
+//Change image based on character selection
+  document.getElementById('boy').addEventListener('click', function() {
+    Player.prototype.render = function() {
+      ctx.drawImage(Resources.get('images/char-boy.png'), this.x, this.y);
+    };
+  });
+
+  document.getElementById('cat').addEventListener('click', function() {
+    Player.prototype.render = function() {
+      ctx.drawImage(Resources.get('images/char-cat-girl.png'), this.x, this.y);
+    };
+  });
+
+  document.getElementById('pink').addEventListener('click', function() {
+    Player.prototype.render = function() {
+      ctx.drawImage(Resources.get('images/char-pink-girl.png'), this.x, this.y);
+    };
+  });
+
+  document.getElementById('horn').addEventListener('click', function() {
+    Player.prototype.render = function() {
+      ctx.drawImage(Resources.get('images/char-horn-girl.png'), this.x, this.y);
+    };
+  });
+
+  document.getElementById('princess').addEventListener('click', function() {
+    Player.prototype.render = function() {
+      ctx.drawImage(Resources.get('images/char-princess-girl.png'), this.x, this.y);
+    };
+  });
+
+// Add selected class to character/difficulty
+//Difficulty selection variables and function
+  var diffDiv = document.getElementById('difficulty');
+  var diffs = diffDiv.getElementsByClassName('difficulty');
+
+  for (var i = 0; i < diffs.length; i++) {
+    diffs[i].addEventListener('click', function() {
+      var select = document.getElementsByClassName('selected');
+
+      if (select.length > 0) {
+        select[0].classList.remove('selected');
+      };
+
+      this.classList.add('selected');
+    })
+  };
+
+//Character selection variables and function
+  var chars = document.getElementById('character');
+  var units = chars.getElementsByClassName('character');
+
+  for (var i = 0; i < units.length; i++) {
+    units[i].addEventListener('click', function() {
+      var select = document.getElementsByClassName('selected');
+
+      if (select.length > 0) {
+        select[0].classList.remove('selected');
+      };
+
+      this.classList.add('selected');
+    });
+  };
 };
