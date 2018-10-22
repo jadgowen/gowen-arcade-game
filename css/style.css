@@ -3,7 +3,6 @@ body {
     font-size: 1.5em;
 }
 
-/* Scoreboard colors */
 .fail {
   color: #cf0000;
   font-weight: bold;
@@ -23,8 +22,11 @@ body {
 }
 
 /* Difficulty and Character selection */
-.selected,
+.selected {
+  box-shadow: 0 5px 0px rgba(0,200,0,0.2);
+}
+
 .difficulty:hover,
 .character:hover {
-  box-shadow: 0 5px 0px rgba(0,200,0,0.2);
+  box-shadow: 0 5px 0px rgba(0,0,0,0.2);
 }
