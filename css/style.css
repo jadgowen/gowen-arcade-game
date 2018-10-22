@@ -1,16 +1,23 @@
 body {
     text-align: center;
     font-size: 1.5em;
+    font-family: 'Mali', cursive;
+}
+
+h2 {
+  margin-bottom: -50px;
 }
 
 .fail {
   color: #cf0000;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .success {
-  color: #c99312;
+  color: #00a000;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Difficulty button styling */
@@ -19,6 +26,11 @@ body {
   background: none;
   border: none;
   font-size: 1em;
+  font-family: 'Mali', cursive;
+}
+
+#character {
+  margin-top: -50px;
 }
 
 /* Difficulty and Character selection */

@@ -174,12 +174,13 @@ window.onload = function() {
     };
   });
 
-  // Change image based on character selection, reset score
+  // Change image based on character selection, reset score/position
   document.getElementById('boy').addEventListener('click', function() {
     Player.prototype.render = function() {
       ctx.drawImage(Resources.get('images/char-boy.png'), this.x, this.y);
     };
     score.resetScore();
+    player.reset();
   });
 
   document.getElementById('cat').addEventListener('click', function() {
@@ -187,6 +188,7 @@ window.onload = function() {
       ctx.drawImage(Resources.get('images/char-cat-girl.png'), this.x, this.y);
     };
     score.resetScore();
+    player.reset();
   });
 
   document.getElementById('pink').addEventListener('click', function() {
@@ -194,6 +196,7 @@ window.onload = function() {
       ctx.drawImage(Resources.get('images/char-pink-girl.png'), this.x, this.y);
     };
     score.resetScore();
+    player.reset();
   });
 
   document.getElementById('horn').addEventListener('click', function() {
@@ -201,6 +204,7 @@ window.onload = function() {
       ctx.drawImage(Resources.get('images/char-horn-girl.png'), this.x, this.y);
     };
     score.resetScore();
+    player.reset();
   });
 
   document.getElementById('princess').addEventListener('click', function() {
@@ -208,6 +212,7 @@ window.onload = function() {
       ctx.drawImage(Resources.get('images/char-princess-girl.png'), this.x, this.y);
     };
     score.resetScore();
+    player.reset();
   });
 
   // Difficulty selection variables and function
