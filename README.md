@@ -1,6 +1,27 @@
-frontend-nanodegree-arcade-game
-===============================
+# Joe's Classic Arcade Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Instructions](#instructions)
+* [Comments](#comments)
+* [Dependencies](#dependencies)
+
+## Instructions
+
+The goal of the Classic Arcade Game is to successfully move your character to the water without being hit by a bug!
+
+Each time the player successfully reaches the water or is hit by a bug the Successes and Fails counters will update, respectively.
+
+The game defaults on Medium difficulty. Players can decrease difficulty by clicking on Easy, or increase difficulty by clicking on Hard.
+
+Players can also select one of the five available characters by clicking their picture.
+
+Play the game by cloning the project [here](https://github.com/jadgowen/gowen-arcade-game.git), then opening the index.html file in the browser of your choice.
+
+## Comments
+
+This Classic Arcade Game project leveraged existing css, html, and js resources associated with the project. It was also inspired by all of the great contributors at sites like StackOverflow, MDN Developer, w3 Schools, and most impressive, the great students at Udacity!
+
+## Dependencies
+
+The project references scripts in its css folder and js folder, sprites from its images folder, as well as a Google font for the text.
