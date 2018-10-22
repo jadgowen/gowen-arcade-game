@@ -1,8 +1,8 @@
 /*
 * Note: Column segment height 101px, Row segment defined as 83px in engine.js
+* General inspiration from the great communities at Udacity, StackOverflow, and the internet at large!
 * Instantiation code inspired by Esther Jun Kim http://esthermakes.tech/
 * Random speed function inspired by W3 Schools https://www.w3schools.com/js/js_random.asp
-*
 */
 
 // Enemy variable with x, y, speed, and image values
@@ -95,8 +95,8 @@ Player.prototype.reset = function() {
 
 // Instantiate enemies contained within array, -20 is to center sprite on row
 let allEnemies = [];
-let numEnemies = 3;
-for(i = 0; i < numEnemies; i++) {
+let enemyRows = 3;
+for(i = 0; i < enemyRows; i++) {
   allEnemies.push(new Enemy(i*101, (i+1)*83-20));
 };
 
@@ -104,7 +104,7 @@ for(i = 0; i < numEnemies; i++) {
 const Score = function () {
   this.success = 0;
   this.fail = 0;
-}
+};
 
 // Adds increment to success value of constructor function Score object
 Score.prototype.addSuccess = function () {
@@ -146,32 +146,39 @@ window.onload = function() {
   // Change difficulty of game (hard, medium, easy)
   document.getElementById('hard').addEventListener('click', function () {
     allEnemies = [];
-    numEnemies = 4;
-    for(i = 0; i < numEnemies; i++) {
+    enemyRows = 4;
+    for(i = 0; i < enemyRows; i++) {
       if (i == 1) {
         allEnemies.push(new Enemy(i*101, (i+1)*83-20));
+        // Adds second enemy on same row
         allEnemies.push(new Enemy(0, (i+1)*83-20));
       }
       else {
         allEnemies.push(new Enemy(i*101, (i+1)*83-20));
-      }
+      };
     };
+    score.resetScore();
+    player.reset();
   });
 
   document.getElementById('medium').addEventListener('click', function() {
     allEnemies = [];
-    numEnemies = 3;
-    for(i = 0; i < numEnemies; i++) {
+    enemyRows = 3;
+    for(i = 0; i < enemyRows; i++) {
       allEnemies.push(new Enemy(i*101, (i+1)*83-20));
     };
+    score.resetScore();
+    player.reset();
   });
 
   document.getElementById('easy').addEventListener('click', function() {
     allEnemies = [];
-    numEnemies = 2;
-    for(i = 0; i < numEnemies; i++) {
+    enemyRows = 2;
+    for(i = 0; i < enemyRows; i++) {
       allEnemies.push(new Enemy(i*101, (i+1)*83-20));
     };
+    score.resetScore();
+    player.reset();
   });
 
   // Change image based on character selection, reset score/position

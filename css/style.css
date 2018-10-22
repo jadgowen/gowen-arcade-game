@@ -8,6 +8,8 @@ h2 {
   margin-bottom: -50px;
 }
 
+/* Score colors */
+
 .fail {
   color: #cf0000;
   font-weight: bold;
@@ -22,23 +24,37 @@ h2 {
 
 /* Difficulty button styling */
 .difficulty {
-  color: #636363;
   background: none;
   border: none;
   font-size: 1em;
   font-family: 'Mali', cursive;
 }
 
+#easy {
+  color: #006000;
+  font-weight: bold;
+}
+
+#medium {
+  color: #906000;
+  font-weight: bold;
+}
+
+#hard {
+  color: #600000;
+  font-weight: bold;
+}
+
 #character {
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 /* Difficulty and Character selection */
 .selected {
-  box-shadow: 0 5px 0px rgba(0,200,0,0.2);
+  box-shadow: 0 5px 0px rgba(0,200,0,0.5);
 }
 
 .difficulty:hover,
 .character:hover {
-  box-shadow: 0 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 0px rgba(0,0,0,0.5);
 }
